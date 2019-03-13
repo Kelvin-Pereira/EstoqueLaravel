@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//pagina inicial
+Route::get('/', 'HomePage\HomePageController@index');
+
+//Estoque
+Route::get('/Estoque', 'Produto\ProdutoController@index'); //listagem de produto
+Route::get('/CadastarProduto', 'Produto\ProdutoController@CadastarProduto'); // Formulario para cadastrar Novo Produto
+Route::post('/Creat', 'Produto\ProdutoController@Creat'); //cadastrar Novo Produto
