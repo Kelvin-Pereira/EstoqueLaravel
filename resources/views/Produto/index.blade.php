@@ -4,7 +4,7 @@
     <h1>Estoque</h1>
     {{-- link para Adicionar Novo Produto --}}
     <div class="raw text-right">
-        <a href="/CadastarProduto" class="btn btn-info btn-lg">
+        <a href="/cadastro-produto" class="btn btn-info btn-lg">
             <span class="glyphicon glyphicon-plus"></span> Novo Produto 
         </a>
     </div>

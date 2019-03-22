@@ -18,7 +18,7 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/Estoque">Estoque</a>
+                    <a class="nav-link" href="/lista-produtos">Estoque</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="/Pedidos">Pedidos</a>

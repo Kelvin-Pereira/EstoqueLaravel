@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Produto;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Produto;
 
 class ProdutoController extends Controller
 {
@@ -12,18 +13,30 @@ class ProdutoController extends Controller
     }
     // Encaminha para Pagina de Formulario
     public function CadastarProduto(){
-        return view('Produto.creat');
+        return view('Produto.create');
     }
     //Cadastrar Novo Produto
-    public function Creat(Request $request){
+    public function Create(Request $request){
 
-        $NomeProduto = $request->NomeProduto;
-        $CodigoBarra = $request->CodigoBarra;
-        $PrecoProduto = $request->PrecoProduto;
-        $qtdProduto = $request->qtdProduto;
-        $NomeProduto = $request->NomeProduto;
-        $CategoriaProduto = $request->CategoriaProduto;
+        $produto = new Produto();
 
-        return view('Produto.creat');
+        $produto->nome = $request->NomeProduto;
+        $produto->codigo_barra = $request->CodigoBarra;
+        $prod = $request->PrecoProduto;
+        $produto = $request->NomeProduto;
+        $produto = $request->descricao;
+        $produto = $request->CategoriaProduto;
+        $produto = $request->qtdProduto;
+
+         // Curso::destroy(4);
+        // $curso = new Curso();
+        // $curso->nome = 'Enfermagem';
+        // $curso->duracao = 5;
+        // $curso->save();
+        //  return Curso::all(); //returma um json comtudo do banco
+        // return view('Cursos.index');
+
+
+        return view('Produto.create');
     }
 }

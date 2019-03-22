@@ -2,7 +2,7 @@
 
 @section('Conteudo')
     <h1 class="text-center">Novo Produto</h1>
-
+{{-- formulario --}}
     <form action="" method="post">
         @csrf
         <div class="row"> 
@@ -38,7 +38,7 @@
                     <input type="text" class="form-control" id="DescricaoProduto" name="DescricaoProduto"  placeholder="DescricaoProduto" required>
                 </div><br>
                 <div class="form-group text-center">
-                    <button type="reset" class="btn btn-secondary">Cadastar</button>
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
                     <button type="submit" class="btn btn-success">Cadastar</button>
                 </div>
             </div>
