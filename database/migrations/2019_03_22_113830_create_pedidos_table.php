@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePrecoProdutosTable extends Migration
+class CreatePedidosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePrecoProdutosTable extends Migration
      */
     public function up()
     {
-        Schema::create('preco_produtos', function (Blueprint $table) {
+        Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
-            $table->float('preco');
+            $table->integer('quantidade');
+            $table->integer('pessoa_id')->unsigned(); 
+            $table->foreign('pessoa_id')->references('id')->on('pessoas');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -28,6 +30,6 @@ class CreatePrecoProdutosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('preco_produtos');
+        Schema::dropIfExists('pedidos');
     }
 }
